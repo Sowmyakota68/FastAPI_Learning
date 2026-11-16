@@ -10,7 +10,7 @@ router = APIRouter(
     prefix = "/Users",
     tags=["Users"]
 )
-
+# create database session
 def get_db():
     db = SessionLocal()
     try:

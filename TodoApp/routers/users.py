@@ -34,7 +34,7 @@ def get_active_users(user:user_dependency,db:db_dependency):
                         detail="Authentication Failed"
                     )    
     return user_model
-
+# update phone number
 @router.put("/update_phone")
 def update_user_phone_number(user:user_dependency,db:db_dependency,updateNumber:UpdatePhoneNumberModel):
      user_model = db.query(Users).filter(user.get('id')== Users.id).first()
